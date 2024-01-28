@@ -1,0 +1,18 @@
+.class1{
+    text-align: center;
+    color: rgb(250, 94, 3);
+}
+
+th,td,table{
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    border-collapse: collapse;
+    border-style: double;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th,td{
+    padding: 10px;
+}
+
+ 
