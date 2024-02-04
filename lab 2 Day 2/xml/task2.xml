@@ -1,0 +1,31 @@
+<students>
+    <student sr="1">
+        <serialNumber>23</serialNumber>
+        <name>John Carter </name>
+         <admissionDate>
+            <day>25</day>   
+            <month>12</month>
+            <year>2005</year>
+        </admissionDate>     
+    </student>
+
+    <student sr="2">
+        <serialNumber>29</serialNumber>
+        <name>Bob Marshal  </name>
+         <admissionDate>
+            <day>13</day>   
+            <month>01</month>
+            <year>1999</year>
+        </admissionDate>      
+    </student>
+
+    <student sr="3">
+        <serialNumber>35</serialNumber>
+        <name>Clark Kent </name>
+        <admissionDate>
+            <day>17</day>   
+            <month>06</month>
+            <year>2005</year>
+        </admissionDate>     
+    </student>
+</students>
