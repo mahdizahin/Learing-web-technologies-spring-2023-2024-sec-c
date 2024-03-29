@@ -1,18 +1,23 @@
-<?php
+ <html lang="en">
 
-$length= 5;
-$width = 4;
+<head>
+    <title>LOGIN</title>
+</head>
 
-    echo "
-             The Length of a Rectangle : {$length} <br/>
-             The width of a Rectangle : {$width} <br/> <br/>
-        ";
+<body>
+    <form method="post" action="loginCheck.php" enctype="">
+        <fieldset>
+            <legend>LOGIN</legend>
+            User Name: <input type="text" name="username" value="" /> <br>
+            Password: <input type="password" name="password" value="" /> <br>
+            <hr>
+            <input type="checkbox" name="remember_me" id="checkbox">
+            <label for="checkbox"> Remember Me</label><br>
+            <input type="submit" name="submit" value="Submit" />
+            <a href="">Forget Password?</a>
+        </fieldset>
 
-$area =$length*$width;
-echo "The area of a Rectangle : ". $area;
+    </form>
+</body>
 
-$perimeter = 2*($length+$width);
-echo "<br/> The perimeter of a Rectangle : ". $perimeter;
-
-
-?>
+</html>
