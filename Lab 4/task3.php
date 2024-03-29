@@ -1,14 +1,21 @@
-<?php
+<html lang="en">
 
-function evenOddDetect($number){
-    if ($number % 2 == 0) {
-        return "Even";
-    } else {
-        return "Odd";
-    }
-}
-$number=5;
-echo "Entered Number is {$number} <br/>";
-echo "THIS NUMBER IS : ".evenOddDetect($number);
+<head>
+    <title>Password Change</title>
+</head>
 
-?>
+<body>
+    <form method="post" action="passwordChangeCheck.php" enctype="">
+        <fieldset>
+            <legend>PASSWORD CHANGE</legend>
+            Current Password: <input type="password" name="currpassword" value="" /> <br>
+            New Password: <input type="password" name="newpassword" value="" /> <br>
+            Retype New Password: <input type="password" name="retypepassword" value="" /> <br>
+            <hr>
+            <input type="submit" name="submit" value="Submit" />
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
