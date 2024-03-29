@@ -1,13 +1,19 @@
-<?php
+<html lang="en">
 
-echo "<h2>Odd numbers between 10 to 100</h2>";
-for ($i = 10; $i <= 100; $i++) {
-    // Check if the number is odd
-    if ($i % 2 != 0) {
-        echo "<h2>$i</h2>";
-    }
-}
+<head>
+    <title>Image</title>
+</head>
 
+<body>
+    <form method="post" action="loginCheck.php" enctype="">
+        <fieldset>
+            <legend>IMAGE</legend>
+            <input type="file" name="image" value="" /> <br>
+            <hr>
+            <input type="submit" name="submit" value="Submit" />
+        </fieldset>
 
+    </form>
+</body>
 
-?>
+</html>
