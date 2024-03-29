@@ -1,21 +1,36 @@
- <html lang="en">
+ <?php 
+    session_start();
 
-<head>
-    <title>ChangePassword </title>
-</head>
+    $username = $_REQUEST['username'];
+    $password = $_REQUEST['password'];
+    $checkbox = $_REQUEST['remember_me'];
+    
+    if($username == "" || $password == ""){
+        echo "null value";
+    }elseif(strlen($username)>= 2 && strlen($password)>=8){
+        $count = 0;
+        $count1 = 0;
+        for($i = 0; $i < strlen($username); $i++){
+            $char = $username[$i];
 
-<body>
-    <form method="post" action="passwordChangeCheck.php" enctype="">
-        <fieldset>
-            <legend>PASSWORD CHANGE</legend>
-            Current Password: <input type="password" name="currpassword" value="" /> <br>
-            New Password: <input type="password" name="newpassword" value="" /> <br>
-            Retype New Password: <input type="password" name="retypepassword" value="" /> <br>
-            <hr>
-            <input type="submit" name="submit" value="Submit" />
-        </fieldset>
+            if (!ctype_alnum($char) && $char !== '.' && $char !== '-' && $char !== '_') {
+                $count++;
+            }
+        }
+        for($i = 0; $i < strlen($password); $i++) {
+            $char = $password[$i];
+            if (!ctype_alnum($char) && $char !== '@' && $char !== '#' && $char !== '$' && $char !== '%') {
+                $count1++;
+            }
+        }
+        if($count == 0 && $count1 == 0){
+            setcookie('flag', 'true', time()+3600, '/');
+            header('location: home.php');
+        }
+        else {
+            echo "Invalid Username or password";
+        }
+    }
 
-    </form>
-</body>
-
-</html>
+    
+?>
