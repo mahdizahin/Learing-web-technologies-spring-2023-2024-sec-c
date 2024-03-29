@@ -1,15 +1,15 @@
 <?php
 
-function findLargestNumber($num1, $num2, $num3) {
-    if ($num1 >= $num2 && $num1 >= $num3) {
-        return $num1;
-    } elseif ($num2 >= $num1 && $num2 >= $num3) {
-        return $num2;
-    } else {
-        return $num3;
-    }
-}
+    $currpassword = $_REQUEST['currpassword'];
+    $newpassword = $_REQUEST['newpassword'];
+    $retypepassword = $_REQUEST['retypepassword'];
 
-echo "Largest Number is : ". findLargestNumber(3,4,5);
+    if($currpassword == "" || $newpassword == "" || $retypepassword == ""){
+        echo "null value";
+    }else if($currpassword !== $newpassword && $newpassword == $retypepassword){
+        echo "Password changed successfully";
+    }else{
+        echo "invalid password! or can not use previous password again.";
+    }
 
 ?>
